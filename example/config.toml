@@ -28,7 +28,7 @@ interval = 1
 after = ""
 
 [[block]]
-execute = "/home/deck/SCRIPTS/usd-uah.sh"
+execute = "currency.sh"
 interval = 3600
 after = ""
 
