@@ -1,0 +1,24 @@
+[package]
+name = "rustblocks"
+version = "0.1.0"
+edition = "2021"
+description = "dwmblocks-async written in Rust"
+readme = "README.md"
+keywords = ["dwmblocks-async", "status", "dwm", "async"]
+
+[dependencies]
+simple_logger = { version = "5", features = [
+  "colored",
+], default-features = false }
+log = { version = "0.4", default-features = false }
+toml = { version = "0.8", default-features = false, features = ["parse"] }
+serde = { version = "1", default-features = false }
+x11rb = { version = "0.13" }
+argh = { version = "0.1" }
+
+#[profile.release]
+#opt-level = "z"
+#strip = "symbols"
+#lto = "fat"
+#panic = "abort"
+#codegen-units = 1

@@ -1,0 +1,54 @@
+
+# Each block has several parameters:
+# `execute` -   console command or file or script that will be called at the interval.
+# `interval`-   The interval in seconds at which the specified command will be run.
+#
+# if the interval is zero, the script will not be launched even once.
+# In this case, the only option is to manually update it via
+# `atomblocks hit <ID>` which triggers the command to make an update
+#
+
+# (optional) delimiter between blocks in bar
+delimiter = " | "
+
+[[block]]
+execute = "check-connection"
+interval = 5
+after = ""
+
+[[block]]
+execute = "netusage"
+interval = 1
+after = ""
+
+# another block example
+[[block]]
+execute = "cpu"
+interval = 1
+after = ""
+
+[[block]]
+execute = "/home/deck/SCRIPTS/usd-uah.sh"
+interval = 3600
+after = ""
+
+# index is 0
+[[block]]
+# this will be executed as /bin/sh -c <your script>
+execute = "date +%T"
+# (optional) interval in seconds; can be float
+interval = 1
+# (optional ) print before command result
+before = ""
+# (optional) print after command result
+after = ""
+
+# index is 1
+#[[block]]
+#execute = "wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -d' ' -f2", 0, 5"
+# this will be updated only manually, using
+# `atomblocks hit 1`
+# where 1 - block index
+#interval = 0
+
+
