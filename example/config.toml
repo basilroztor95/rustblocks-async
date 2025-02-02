@@ -5,7 +5,7 @@
 #
 # if the interval is zero, the script will not be launched even once.
 # In this case, the only option is to manually update it via
-# `atomblocks hit <ID>` which triggers the command to make an update
+# `rustblocks hit <ID>` which triggers the command to make an update
 #
 
 # (optional) delimiter between blocks in bar
